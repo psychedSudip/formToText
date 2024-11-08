@@ -12,7 +12,7 @@ app.post("/save-form", (req, res) => {
   const userData = `Username = ${username} Email = ${email}`;
 
   fs.appendFile(
-    path.join(__dirname, "Data", "form-data.txt"),
+    path.join("form-data.txt"),
     `\n${userData}`,
     (err) => {
       if (err) res.send("Error saving data");
